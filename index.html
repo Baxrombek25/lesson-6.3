@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Ro'yhatdan O‘tish Formasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    .gender-options {
+      display: flex;
+      gap: 10px;
+    }
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Ro'yhatdan O‘tish</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">To‘liq ismingiz:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Elektron pochta:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Yoshingiz:</label>
+        <input type="number" id="age" name="age" min="1" max="100" required>
+      </div>
+      <div class="form-group">
+        <label>Jinsingiz:</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="male" required> Erkak</label>
+          <label><input type="radio" name="gender" value="female"> Ayol</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="about">O‘zingiz haqingizda:</label>
+        <textarea id="about" name="about" rows="4"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Yuborish</button>
+    </form>
+  </div>
+</body>
+</html>
